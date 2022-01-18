@@ -1,0 +1,57 @@
+body {
+    background: url('https://cdn.pixabay.com/photo/2017/06/14/08/20/map-of-the-world-2401458_960_720.jpg') no-repeat;
+    background-size: cover;
+}
+.theme {
+    display: flex;
+    justify-content: space-around;
+}
+.container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 15px 15px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 30px;
+    padding: 10px;
+
+}
+.elem {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    
+}
+.elem-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    font-size: 30px;
+    
+}
+.elem:hover .elem-inner {
+    transform: rotateX(180deg)
+}
+.elem-front, .elem-back {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid orange;
+    border-radius: 10px;
+    padding-top: 25px;
+    font-family: 'Brush Script MT', cursive;
+}
+.elem-front {
+    background-color: rgb(243, 227, 208);
+    color:black;
+
+}
+.elem-back {
+    background-color: orange;
+    color: black;
+    transform: rotateX(180deg);
+}
